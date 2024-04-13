@@ -10,7 +10,7 @@ export default function App() {
     const pokelistInterceptor = axios.interceptors.request.use(
       function (conf) {
       if (conf.url === src) {
-        conf.params = conf.params ? conf.params : {};;
+        conf.params = conf.params ? conf.params : {};
         conf.params.limit = 151;
       }
       return conf;
